@@ -1,42 +1,57 @@
-name: Love2D Blog
-description: Блог о Love2D и не только
-meta_description: "Love2D ru Blog, Blogging about stuffs"
+# Site settings
+title: Hanuman
+description: Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
+cover: assets/images/radhakrishna.jpg
+logo: assets/images/logo.png
+favicon: assets/images/favicon.png
+baseurl: "/hanuman/" # the subpath of your site, e.g. /blog/ or / for root
+url: "https://samanyougarg.com" # the base hostname & protocol for your site
+paginate:	5 # The number of posts to show per page on your homepage
 
-aboutPage: true
+# Social
+facebook: facebook
+twitter: twitter
+github:  github
 
+#Additional Pages
+about: about
+contact: contact
+privacy-policy: privacy-policy
+
+
+permalink: /:title
+
+
+# Google Analytics
+analytics_id: ""
+
+# Build settings
 markdown: kramdown
-highlighter: rouge
 
-plugins: [jekyll-paginate]
-paginate: 20
-domain_name: 'http://love2d.ru'
-google_analytics: 'UA-XXXXXXXX-X'
-disqus: false
-disqus_shortname: 'your-disqus-shortname'
+kramdown:
+  parse_block_html: true
 
-# Details for the RSS feed generator
-url:            'http://blog.love2d.ru'
-author:         'Markelov'
-authorTwitter:  'Marke1l'
+plugins:
+  - jekyll-paginate
 
-permalink:       /:year/:title/
 
-defaults:
-    -
-        scope:
-            path: "" # empty string for all files
-            type: pages
-        values:
-            layout: default
-    -
-        scope:
-            path: "" # empty string for all files
-            type: posts
-        values:
-            layout: post
-    -
-        scope:
-            path: ""
-            type: drafts
-        values:
-            layout: post
+# Settings for rake task
+safe: False
+lsi: False
+username: samanyougarg #github username
+repo: hanuman #github repository
+branch: master #branch
+relative_source: ../hanuman/ #source directory
+destination: ../hanuman-pages/ #destination directory
+production_url:  https://samanyougarg.com/
+source_url:  https://github.com/samanyougarg/hanuman #source repository url
+
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml

@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
-gem "rake"
-ruby "2.4.4"
+
+gem "jekyll", "~> 3.6.2"
+gem 'jekyll-compose', group: [:jekyll_plugins]
+gem "github-pages", "~> 168"
+gem "rake", "~> 12.3.0"
+gem 'jekyll-paginate'
